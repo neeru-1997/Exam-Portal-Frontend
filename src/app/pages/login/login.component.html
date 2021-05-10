@@ -8,10 +8,11 @@
           </div>
           <h1 class="text-center">Login Here</h1>
 
-          <form>
+          <form (ngSubmit)="onFormSubmit()">
             <mat-form-field class="full-width" appearance="outline">
               <mat-label>Username</mat-label>
               <input
+                [(ngModel)]="loginData.username"
                 required
                 name="username"
                 matInput
@@ -24,6 +25,7 @@
             <mat-form-field class="full-width" appearance="outline">
               <mat-label>Password</mat-label>
               <input
+                [(ngModel)]="loginData.password"
                 required
                 name="password"
                 type="password"
