@@ -1,12 +1,23 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+
 import baseUrl from './helper';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LoginService {
+
+  //to inform navbar that the user isloggedIn to update its state
+  public loginStatusSubject = new Subject<boolean>();
+
   constructor(private http: HttpClient) {}
+
+  //get current user data
+  public getCurrentUser() {
+    return this.http.get(`${baseUrl}/current-user`);
+  }
 
   //generate token
   public generateToken(loginData: any) {
@@ -15,13 +26,13 @@ export class LoginService {
 
   //login : set token in localStorage
   public loginUser(token) {
-    localStorage.setItem('Token', token);
+    localStorage.setItem('token', token);
     return true;
   }
 
   // isUserLoggedIn or not
   public isLoggedIn() {
-    let tokenStr = localStorage.getItem('Token');
+    let tokenStr = localStorage.getItem('token');
     if (tokenStr == undefined || tokenStr == '' || tokenStr == null) {
       return false;
     } else {
@@ -31,24 +42,24 @@ export class LoginService {
 
   // logout: remove token from localStorage
   public logout() {
-    localStorage.removeItem('Token');
-    localStorage.removeItem('User');
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
     return true;
   }
 
   //get token
   public getToken() {
-    localStorage.getItem('Token');
+    return localStorage.getItem('token');
   }
 
   //set User details
   public setUser(user) {
-    localStorage.setItem('User', JSON.stringify(user));
+    localStorage.setItem('user', JSON.stringify(user));
   }
 
   //get User
   public getUser() {
-    let userStr = localStorage.getItem('User');
+    let userStr = localStorage.getItem('user');
     if (userStr != null) {
       return JSON.parse(userStr);
     } else {
