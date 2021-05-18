@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminDashboardComponent } from './pages/admin/admin-dashboard/admin-dashboard.component';
+import { WelcomeAdminComponent } from './pages/admin/welcome-admin/welcome-admin.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
@@ -19,6 +20,10 @@ const routes: Routes = [
     component: AdminDashboardComponent,
     canActivate: [AdminGuard],
     children: [
+      {
+        path: '',
+        component: WelcomeAdminComponent,
+      },
       {
         path: 'profile',
         component: ProfileComponent,

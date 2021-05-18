@@ -27,6 +27,7 @@ import { AdminDashboardComponent } from './pages/admin/admin-dashboard/admin-das
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
+import { WelcomeAdminComponent } from './pages/admin/welcome-admin/welcome-admin.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
     UserDashboardComponent,
     ProfileComponent,
     SidebarComponent,
+    WelcomeAdminComponent,
   ],
   imports: [
     BrowserModule,
