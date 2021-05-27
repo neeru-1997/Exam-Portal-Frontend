@@ -28,6 +28,8 @@ import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboa
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
 import { WelcomeAdminComponent } from './pages/admin/welcome-admin/welcome-admin.component';
+import { ViewCategoriesComponent } from './pages/admin/view-categories/view-categories.component';
+import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { WelcomeAdminComponent } from './pages/admin/welcome-admin/welcome-admin
     ProfileComponent,
     SidebarComponent,
     WelcomeAdminComponent,
+    ViewCategoriesComponent,
+    AddCategoryComponent,
   ],
   imports: [
     BrowserModule,
