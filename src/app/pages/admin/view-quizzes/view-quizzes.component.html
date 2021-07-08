@@ -12,7 +12,7 @@
       mat-flat-button
       color="primary"
       [routerLink]="
-        '/admin-dashboard/view-questions/' + quiz.qid + '/' + quiz.title
+        '/admin-dashboard/view-questions/' + quiz.qId + '/' + quiz.title
       "
     >
       Questions
@@ -27,7 +27,7 @@
       mat-flat-button
       color="primary"
       class="ml20"
-      [routerLink]="'/admin-dashboard/quiz/' + quiz.qid"
+      [routerLink]="'/admin-dashboard/quiz/' + quiz.qId"
     >
       Update
     </button>
@@ -36,7 +36,7 @@
       mat-flat-button
       color="primary"
       class="ml20"
-      (click)="deleteQuiz(quiz.qid)"
+      (click)="deleteQuiz(quiz.qId)"
     >
       Delete
     </button>

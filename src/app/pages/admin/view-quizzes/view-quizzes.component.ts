@@ -15,6 +15,8 @@ export class ViewQuizzesComponent implements OnInit {
     this.quizService.getAllQuizzes().subscribe(
       (data: any) => {
         this.quizzes = data;
+        console.log(data);
+
       },
       (error) => {
         console.log(error);
@@ -23,7 +25,7 @@ export class ViewQuizzesComponent implements OnInit {
     );
   }
 
-  deleteQuiz(qid: number) {
+  deleteQuiz(qId: number) {
     Swal.fire({
       icon: 'info',
       title: 'Are you sure ?',
@@ -31,9 +33,9 @@ export class ViewQuizzesComponent implements OnInit {
       showCancelButton: true,
     }).then((result) => {
       if (result.isConfirmed) {
-        this.quizService.deleteQuiz(qid).subscribe(
+        this.quizService.deleteQuiz(qId).subscribe(
           (data) => {
-            this.quizzes = this.quizzes.filter((quiz) => quiz.qid != qid);
+            this.quizzes = this.quizzes.filter((quiz) => quiz.qId != qId);
             Swal.fire('Success', 'Quiz Deleted', 'success');
           },
           (error) => {

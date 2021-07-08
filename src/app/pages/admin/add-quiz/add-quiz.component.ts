@@ -16,10 +16,10 @@ export class AddQuizComponent implements OnInit {
     title: '',
     description: '',
     maxMarks: '',
-    noOfQuestions: '',
+    numberOfQuestions: '',
     active: true,
     category: {
-      cId: '',
+      cid: '',
     },
   };
 
@@ -33,7 +33,7 @@ export class AddQuizComponent implements OnInit {
     this.categoryService.getAllCategories().subscribe(
       (data: any) => {
         this.categories = data;
-        // console.log(data);
+        console.log(data);
       },
       (error) => {
         console.log(error);
@@ -58,10 +58,10 @@ export class AddQuizComponent implements OnInit {
           title: '',
           description: '',
           maxMarks: '',
-          noOfQuestions: '',
+          numberOfQuestions: '',
           active: true,
           category: {
-            cId: '',
+            cid: '',
           },
         };
       },

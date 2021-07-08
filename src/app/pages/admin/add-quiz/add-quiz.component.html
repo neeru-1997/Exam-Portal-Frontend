@@ -45,7 +45,7 @@
               <mat-form-field class="w100" appearance="fill">
                 <mat-label>Number of Questions</mat-label>
                 <input
-                  [(ngModel)]="quizData.noOfQuestions"
+                  [(ngModel)]="quizData.numberOfQuestions"
                   type="text"
                   name="noOfQuestions"
                   placeholder="Enter here"
@@ -64,7 +64,7 @@
           <br />
           <mat-form-field appearance="fill" class="mt20 w100">
             <mat-label>Select Category</mat-label>
-            <mat-select name="category" [(ngModel)]="quizData.category.cId">
+            <mat-select name="category" [(ngModel)]="quizData.category.cid">
               <mat-option
                 *ngFor="let category of categories"
                 [value]="category.cid"

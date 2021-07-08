@@ -11,4 +11,15 @@ export class QuestionService {
   public getQuestionsOfQuiz(qid) {
     return this.httpClient.get(`${baseUrl}/question/quiz/all/${qid}`);
   }
+
+  //add question
+  public addQuestion(question) {
+    return this.httpClient.post(`${baseUrl}/question/`, question);
+  }
+
+  //delete question
+  public deleteQuestion(questionId){
+    return this.httpClient.delete(`${baseUrl}/question/${questionId}`);
+  }
 }
+

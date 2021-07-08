@@ -18,13 +18,13 @@ export class QuizService {
   }
 
   //delete quiz
-  public deleteQuiz(qid) {
-    return this.httpClient.delete(`${baseUrl}/quiz/${qid}`);
+  public deleteQuiz(qId) {
+    return this.httpClient.delete(`${baseUrl}/quiz/${qId}`);
   }
 
   //get a single quiz
-  public getQuiz(qid) {
-    return this.httpClient.get(`${baseUrl}/quiz/${qid}`);
+  public getQuiz(qId) {
+    return this.httpClient.get(`${baseUrl}/quiz/${qId}`);
   }
 
   //update quiz
