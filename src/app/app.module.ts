@@ -17,6 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectModule } from '@angular/material/select';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -42,6 +43,7 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { UserSidebarComponent } from './pages/user/user-sidebar/user-sidebar.component';
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
 import { InstructionsComponent } from './pages/user/instructions/instructions.component';
+import { StartComponent } from './pages/user/start/start.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +68,7 @@ import { InstructionsComponent } from './pages/user/instructions/instructions.co
     UserSidebarComponent,
     LoadQuizComponent,
     InstructionsComponent,
+    StartComponent,
   ],
   imports: [
     BrowserModule,
@@ -84,6 +87,7 @@ import { InstructionsComponent } from './pages/user/instructions/instructions.co
     MatSlideToggleModule,
     MatSelectModule,
     CKEditorModule,
+    MatProgressSpinnerModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent],

@@ -21,5 +21,10 @@ export class QuestionService {
   public deleteQuestion(questionId){
     return this.httpClient.delete(`${baseUrl}/question/${questionId}`);
   }
+
+  public getQuestionsOfQuizForTest(qid) {
+    return this.httpClient.get(`${baseUrl}/question/quiz/${qid}`);
+  }
+
 }
 
