@@ -1,5 +1,10 @@
-<!-- static navbar -->
-<app-navbar></app-navbar>
+<ngx-ui-loader></ngx-ui-loader>
 
-<!-- dynamic content -->
-<router-outlet></router-outlet>
+<div ngxUiLoaderBlurred blur="6">
+  <!-- This page content will be blurred/frosted when foreground loader is showed -->
+  <!-- static navbar -->
+  <app-navbar></app-navbar>
+
+  <!-- dynamic content -->
+  <router-outlet></router-outlet>
+</div>
