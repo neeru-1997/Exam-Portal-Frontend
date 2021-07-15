@@ -39,9 +39,9 @@ export class StartComponent implements OnInit {
 
         this.timer = this.questions.length * 2 * 60;
 
-        this.questions.forEach((q) => {
-          q['givenAnswer'] = '';
-        });
+        // this.questions.forEach((q) => {
+        //   q['givenAnswer'] = '';
+        // });
 
         this.startTimer();
       },
@@ -91,18 +91,37 @@ export class StartComponent implements OnInit {
 
   evalQuiz() {
     //marks calculation
-    this.isSubmit = true;
-    this.questions.forEach((q) => {
-      if (q.givenAnswer == q.answer) {
-        this.correctAnswers++;
-        let marksSingle =
-          this.questions[0].quiz.maxMarks / this.questions.length;
-        this.marksGot += marksSingle;
-      }
 
-      if (q.givenAnswer.trim() != '') {
-        this.attempted++;
+    //Server side evaluation
+
+    this.questionService.evalQuiz(this.questions).subscribe(
+      (data: any) => {
+        this.marksGot =  parseFloat(Number(data.marksGot).toFixed(2));
+        this.correctAnswers = data.correctAnswers;
+        this.attempted = data.attempted;
+        this.isSubmit = true;
+      },
+      (error) => {
+        console.log(error);
       }
-    });
+    );
+
+    //Client side evaluation
+    // this.isSubmit = true;
+    // this.questions.forEach((q) => {
+    //   if (q.givenAnswer == q.answer) {
+    //     this.correctAnswers++;
+    //     let marksSingle =
+    //       this.questions[0].quiz.maxMarks / this.questions.length;
+    //     this.marksGot += marksSingle;
+    //   }
+    //   if (q.givenAnswer.trim() != '') {
+    //     this.attempted++;
+    //   }
+    // });
+  }
+
+  printPage(){
+    window.print();
   }
 }

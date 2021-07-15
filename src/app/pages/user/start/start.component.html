@@ -3,7 +3,19 @@
     <div class="row">
       <div class="col-md-2">
         <!-- instructions -->
-        <h3>instructions</h3>
+        <mat-card style="margin-top: 70px">
+          <mat-card-content>
+            <h3><b>Instructions</b></h3>
+            <ul>
+              <li>
+                Do not refresh the page otherwise you will get new set of
+                questions.
+              </li>
+              <li>Do not switch the tabs</li>
+              <li>Do not minimize the window.</li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
       </div>
       <div class="col-md-8">
         <!-- questions -->
@@ -103,12 +115,20 @@
           <mat-card-title> Quiz Result </mat-card-title>
         </mat-card-header>
         <mat-card-content class="text-center">
-          <h1>Marks Got : {{ marksGot }}</h1>
-          <h1>Correct Answers : {{ correctAnswers }}</h1>
-          <h1>Questions Attempted :{{ attempted }}</h1>
+          <h1>
+            Marks Got : <b>{{ marksGot }}</b>
+          </h1>
+          <h1>
+            Correct Answers : <b>{{ correctAnswers }}</b>
+          </h1>
+          <h1>
+            Questions Attempted : <b>{{ attempted }}</b>
+          </h1>
         </mat-card-content>
         <mat-card-actions class="text-center">
-          <button mat-raised-button color="primary">Print</button>
+          <button (click)="printPage()" mat-raised-button color="primary">
+            Print
+          </button>
           <button
             mat-raised-button
             color="accent"
