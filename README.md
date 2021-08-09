@@ -1,36 +1,42 @@
-# ExamAngularFrontend
+# Exam-Portal-Frontend
 
-# NgVideoGameDb - [Check The Application Here](https://festive-spence-03fd6a.netlify.app/)
+Angular Frontend of the exam portal application.
 
-A game database website. 
+Check the backend at the below link.
 
-API Details - [RAWG Video Game DB](https://rapidapi.com/accujazz/api/rawg-video-games-database/details) 
+Spring boot Backend - [GitHub Repo](https://github.com/neeru-1997/Exam-Portal-Backend) 
 
 ## Screenshots
 
-Home Page - 
+### Admin Module (admin2 | admin2) - 
 
-![image](https://user-images.githubusercontent.com/34072232/127365236-9586bf84-8cba-4b05-a96d-b8a2779fd6fd.png)
+Admin can check profile, add categories, quizzes and questions. 
 
-Sort the games using following options - 
+Admin can enable/disable quiz. If disabled, the quiz will not be shown in the user dashboard.
 
-![image](https://user-images.githubusercontent.com/34072232/127366359-6e00de69-cae6-47d8-935c-4096487f6816.png)
+![image](https://user-images.githubusercontent.com/34072232/128748668-16e1d7f4-1f77-4103-9654-4eab2e452873.png)
 
-### Game Details
+![image](https://user-images.githubusercontent.com/34072232/128749320-c3f76a6c-7eb0-4bb3-aa5a-aefb506853a9.png)
 
-About Tab - 
+![image](https://user-images.githubusercontent.com/34072232/128749539-f7405c2b-1e28-47ea-8721-2fb903a8416f.png)
 
-![image](https://user-images.githubusercontent.com/34072232/127367275-fa13f174-5804-4af1-b67f-fdc9dc3ccde1.png)
+![image](https://user-images.githubusercontent.com/34072232/128749585-0f7ddb3b-98ce-4e45-9ade-64f465aed6fd.png)
 
-Screeshots Tab - 
+![image](https://user-images.githubusercontent.com/34072232/128749716-9a0c8413-3d18-4b07-a2ee-47ad948ff91c.png)
 
-![image](https://user-images.githubusercontent.com/34072232/127367939-9713385f-c86d-4618-a854-7c28a15e7559.png)
+![image](https://user-images.githubusercontent.com/34072232/128749784-eff47833-7e79-4d43-bedf-737f0725e302.png)
 
+### User Module (test | test) - 
 
-Trailers Tab - 
+![image](https://user-images.githubusercontent.com/34072232/128749934-4a835fed-b256-4c6e-ab45-181f29caddc1.png)
 
-![image](https://user-images.githubusercontent.com/34072232/127368013-10c0f0e0-3a41-46f6-8866-2c2c6bbcbabf.png)
+![image](https://user-images.githubusercontent.com/34072232/128750001-50c7a166-64b3-42d2-8e60-0d55f3199375.png)
 
+![image](https://user-images.githubusercontent.com/34072232/128750049-b31406eb-cc8a-4e9e-b16b-8f4af40d037e.png)
+
+![image](https://user-images.githubusercontent.com/34072232/128750109-f285da24-76f3-46b2-9db3-9ebe3c7cf3bf.png)
+
+![image](https://user-images.githubusercontent.com/34072232/128750154-34ebf88f-c1c8-452f-80af-cf97f18eb8cc.png)
 
 ## To Execute The Code - 
 
